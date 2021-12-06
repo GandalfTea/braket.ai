@@ -1,0 +1,18 @@
+
+{
+   "datasets": [
+        {
+            "title": "gas prices daily from January 1997",
+            "author": "tfgb69420",
+            "number-of-files": "1",
+            "file-type": "CSV",
+            "size": "34Kb",
+            "licence": "CCO: Public Domain",
+            "score": "247",
+            "price": "30, usd",
+            "sell-options": "yes",
+            "preview": "./data/gas.txt",
+            "row-number": "4"    
+        }
+    ] 
+}
