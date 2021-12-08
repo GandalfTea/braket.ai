@@ -4,6 +4,8 @@
 #include<cstring>
 
 #define VERSION 0.1
+#define HASH_LENGTH 30
+#define ORIGIN_LENGTH 100
 
 
 typedef enum {
@@ -20,17 +22,17 @@ typedef enum {
 
 typedef enum {
     DATASET_OPEN_SUCCESS,
-    DATASER_OPEN_FILE_ERROR,
+    DATASET_OPEN_FILE_ERROR,
     DATASET_OPEN_COMMAND_ERROR,
     DATASET_OPEN_READ_ERROR
 } DatasetOpenResult;
 
 
 typedef struct {
-    std::ofstream file;     // pointer to file
-    off_t file_length;      // length in bits
-    char* hash;              // local hash of dataset
-    char* origin;           // link to remote origin server
+    std::ofstream file;                     // pointer to file
+    off_t file_length;                      // length in bits
+    const char* hash [HASH_LENGTH];         // local hash of dataset
+    const char* origin [ORIGIN_LENGTH];     // link to remote origin server
 } Dataset;
 
 
