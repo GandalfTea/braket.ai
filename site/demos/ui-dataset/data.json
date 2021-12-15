@@ -1,0 +1,70 @@
+{
+    "common-gen": {
+        "title": "common-gen",
+        "card-description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
+        "cdn-link": "cdn.braket.ai/4547362",
+        "upvotes": 247,
+        "value": "sell",
+        "full-price": 30,
+        "currency": "usd",
+        "free-licence": "y",
+        "entries": 9128,
+        "file-type": "CSV",
+        "file-size": "34Kb",
+        "licence": "CC0: Public Domain",
+        "tasks": [
+            "Regression"
+        ],
+        "language": "English",
+        "homepage": "inklab.usc.edu",
+        "tags": [
+            "language",
+            "text-generation",
+            "reasoning"
+        ],
+        "models": [
+            "..."
+        ],
+        "description": "...",
+        "preview": [
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            },
+            {
+                "concept_set_idx": 0,
+                "concepts": ["ski", "mountain", "skier"],
+                "target": "Three skiers are skiing on a snowy mountain."
+            }
+        ],
+        "code": "cdn.braket.ai/4547362/code",
+        "issues": "cdn.braket.ai/4547362/issues",
+        "discussion": "cdn.braket.ai/4547362/discussion"
+    }
+}

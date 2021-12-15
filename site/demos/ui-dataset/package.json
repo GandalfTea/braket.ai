@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "4",
+    "react-router-dom": "4",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "scripts": {
+    "format": "prettier --single-quote --print-width=120 --write \"./js/**/*.{js,jsx}\"",
+    "lint": "eslint ./js/*.jsx --quiet",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
