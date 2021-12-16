@@ -1,13 +1,9 @@
 import React from 'react';
-import { DatasetCard } from "./DatasetCard.jsx";
+import DatasetCard from './DatasetCard';
 
 class DatasetPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    render(<div />);
+    return <DatasetCard title="nextgen" description="aaa" vote="245" />;
   }
 }
 

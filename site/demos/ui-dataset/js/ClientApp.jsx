@@ -1,16 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { DatasetPage } from "./DatasetPage"
-import data from "../data.json"
-
-
-Data = JSON.parse(data);
-
-
+import DatasetPage from './DatasetPage';
+import data from '../data.json';
 
 const App = function () {
   return (
-    <DatasetPage />      
-  ) 
+    <div className="paging">
+      <DatasetPage />
+      // sidebar // buttons
+    </div>
+  );
 };
-render(<App />, document.getElementById('app'));
+
+render(<DatasetPage />, document.getElementById('appDiv'));

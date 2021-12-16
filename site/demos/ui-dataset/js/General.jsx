@@ -7,13 +7,19 @@ const Button = function (props) {
         <p>{props.text}</p>
       </button>
     );
-  } if (props.type === 'border') {
+  }
+  if (props.type === 'border') {
     return (
-      <button type="button-border" className="button">
+      <button type="button" className="button-border">
         <p>{props.text}</p>
       </button>
     );
   }
+  return (
+    <button type="button" className="button-border">
+      <p>{props.text}</p>
+    </button>
+  );
 };
 
 const Tag = function (props) {
@@ -24,5 +30,4 @@ const Tag = function (props) {
   );
 };
 
-export default Button;
-export default Tag;
+export { Button, Tag };

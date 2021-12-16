@@ -1,0 +1,32 @@
+
+body {
+	background-color: #F6F6F6;
+}
+
+.dataset-card {
+	width: 50%;
+	height: auto;
+	margin-left: 20%;
+	background-color: #2F2F2F;
+	border-radius: 20px;
+	position: relative;
+}
+
+.dataset-card h3, 
+.dataset-card h2 {
+	color: white;
+	font-family: "Lato";
+	margin-left: 20px;
+}
+
+
+.card-vote {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	right: 40px;
+	top: 10px;
+}
+
+
+
