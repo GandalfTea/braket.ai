@@ -3,20 +3,47 @@ body {
 	background-color: #F6F6F6;
 }
 
-.dataset-card {
-	width: 50%;
+.card-address {
+	width: 55%;
 	height: auto;
-	margin-left: 20%;
+	margin-left: 15vw;
+	margin-top: 20vh;
+}
+
+.relative-address {
+	margin: 0;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	font-family: "Roboto Mono";
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.dataset-card {
 	background-color: #2F2F2F;
-	border-radius: 20px;
+	border-radius: 25px;
 	position: relative;
 }
 
 .dataset-card h3, 
 .dataset-card h2 {
 	color: white;
+	font-weight: 400;
+	margin: 0;
+	margin-left: 50px;
+}
+
+.dataset-card h2 {
+	font-family: "Roboto Mono";
+	font-size: 22px;
+	padding-top: 30px;
+}
+
+.dataset-card h3 {
 	font-family: "Lato";
-	margin-left: 20px;
+	font-size: 15px;
+	margin-top: 30px;
+	width: 80%;
 }
 
 
@@ -26,6 +53,79 @@ body {
 	position: absolute;
 	right: 40px;
 	top: 10px;
+}
+
+.bottom {
+	display: flex;
+	flex-direction: row;
+}
+
+.link-background {
+	width: 250px;
+	height: 30px;
+	background-color: #484848;
+	border-radius: 30px;
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-bottom: 25px;
+}
+
+.link-background p {
+	color: white;
+	font-family: "roboto mono";
+	font-weight: 400;
+	font-size: 13px;
+	margin: 0;
+	margin-top: 5px;
+	margin-left: 25px;
+}
+
+
+.buy {
+	position: absolute;
+	right: 150px;
+	bottom: 25px;
+}
+
+
+.button {
+	width: auto;
+	height: 35px;
+	background-color: #F6F6F6;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+}
+
+.button p {
+	font-size: 15px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px;
+	color: #2F2F2F;
+	font-weight: 800;
+}
+
+.button-border {
+	width: auto;
+	height: 35px;
+	background-color: transparent;
+	border-radius: 30px;
+	outline: none;
+	border: 2px solid #F6F6F6;
+}
+
+.button-border p {
+	font-size: 15px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px;
+	color: #F6F6F6;
+	font-weight: 800;
+}
+
+.bottom .button-border {
+	position: absolute;
+	right: 40px;
+	bottom: 25px;
 }
 
 

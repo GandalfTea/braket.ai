@@ -1,10 +1,29 @@
 import React from 'react';
+import { render } from 'react-dom';
 import DatasetCard from './DatasetCard';
+import data from '../data.json';
+
+const dataset = data['common-gen'];
 
 class DatasetPage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return <DatasetCard title="nextgen" description="aaa" vote="245" />;
+    return (
+      <div className="paging">
+        <DatasetCard
+          title={dataset.title}
+          description={dataset['card-description']}
+          score={dataset.upvotes}
+          link={dataset['cdn-link']}
+          raddress={dataset.raddress}
+        />
+      </div>
+    );
   }
 }
 
-export default DatasetPage;
+render(<DatasetPage />, document.getElementById('appDiv'));
+// export default DatasetPage;

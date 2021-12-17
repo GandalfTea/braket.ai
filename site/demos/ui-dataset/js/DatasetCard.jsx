@@ -20,18 +20,25 @@ class DatasetCard extends React.Component {
 
   render() {
     return (
-      <div className="dataset-card">
-        <h2>{this.props.title}</h2>
-        <h3>{this.props.description}</h3>
-        <Vote vote={this.props.vote} />
-        <div className="bottom">
-          <div className="link-background">
-            <p>{this.props.link}</p>
+      <div className="card-address">
+        <p className="relative-address">
+          {this.props.raddress}
+          {' '}
+          <strong>{this.props.title}</strong>
+        </p>
+        <div className="dataset-card">
+          <h2>{this.props.title}</h2>
+          <h3>{this.props.description}</h3>
+          <Vote vote={this.props.score} />
+          <div className="bottom">
+            <div className="link-background">
+              <p>{this.props.link}</p>
+            </div>
+            <div className="buy">
+              <Button type="full" text="Buy" />
+            </div>
+            <Button type="border" text="Test" />
           </div>
-          <div className="buy">
-            <Button type="full" text="Buy" />
-          </div>
-          <Button type="border" text="Test" />
         </div>
       </div>
     );
