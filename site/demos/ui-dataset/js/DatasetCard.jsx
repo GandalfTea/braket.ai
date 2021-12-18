@@ -9,8 +9,8 @@ class Vote extends React.Component {
     this.vote = this.vote.bind(this);
   }
 
-	// Choose which image to render depending on state
-  renderImg( orientation ) {
+  // Choose which image to render depending on state
+  renderImg(orientation) {
     if (orientation === 'upvote') {
       const imup = this.state.isPressedUpvote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
       return <img src={imup} alt="upvote" className="upvote" />;
@@ -22,35 +22,37 @@ class Vote extends React.Component {
     return <img src="../assets/clipboard.svg" />;
   }
 
-	// Sent vote to server and update state
-	vote( vote ) {
-		if ( (vote === "up") ? !this.state.isPressedUpvote : !this.state.isPressedDownvote) {
-			// send request to server 
-			(vote == "up") ? this.setState((prevState) => {isPressedUpvote: !prevState.isPressedUpvote}) :
-										   this.setState((prevState) => {isPressedDownvote: !prevState.isPressedDownvote});
-			return;
-		} 
-		
-		// send request to cancel the like
-		(vote == "up") ? this.setState((prevState) => {isPressedUpvote: !prevState.isPressedUpvote}) :
-									   this.setState((prevState) => {isPressedDownvote: !prevState.isPressedDownvote});
-	} 
+  // Sent vote to server and update state
+  vote(vote) {
+    if (vote === 'up' ? !this.state.isPressedUpvote : !this.state.isPressedDownvote) {
+      // send request to server
+      vote == 'up'
+        ? this.setState((prevState) => {
+            !prevState.isPressedUpvote;
+          })
+        : this.setState((prevState) => {
+            !prevState.isPressedDownvote;
+          });
+      return;
+    }
+
+    // send request to cancel the like
+    vote == 'up'
+      ? this.setState((prevState) => {
+          !prevState.isPressedUpvote;
+        })
+      : this.setState((prevState) => {
+          !prevState.isPressedDownvote;
+        });
+  }
 
   render() {
     return (
       <div className="card-vote">
-        <button
-          type="button"
-          className="score_button"
-          onClick={this.vote.bind(this, "up")}
-        >
+        <button type="button" className="score_button" onClick={this.vote.bind(this, 'up')}>
           {this.renderImg('upvote')}
         </button>
-        <button
-          type="button"
-          className="score_button"
-          onClick={this.vote.bind(this, "down")}
-        >
+        <button type="button" className="score_button" onClick={this.vote.bind(this, 'down')}>
           {this.renderImg('downvote')}
         </button>
         <p>{this.props.vote}</p>
