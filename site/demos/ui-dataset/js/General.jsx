@@ -15,6 +15,14 @@ const Button = function (props) {
       </button>
     );
   }
+  if (props.type === 'tag') {
+    return (
+      <button type="button" className="button-tag">
+        <p>{props.text}</p>
+      </button>
+    );
+  }
+
   return (
     <button type="button" className="button-border">
       <p>{props.text}</p>
@@ -22,12 +30,4 @@ const Button = function (props) {
   );
 };
 
-const Tag = function (props) {
-  return (
-    <div className="tag">
-      <p>{props.text}</p>
-    </div>
-  );
-};
-
-export { Button, Tag };
+export { Button };
