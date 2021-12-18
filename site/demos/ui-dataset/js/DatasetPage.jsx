@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import DatasetCard from './DatasetCard';
 import SidePanel from './SidePanel';
 import data from '../data.json';
@@ -27,5 +26,4 @@ class DatasetPage extends React.Component {
   }
 }
 
-render(<DatasetPage />, document.getElementById('appDiv'));
-// export default DatasetPage;
+export default DatasetPage;

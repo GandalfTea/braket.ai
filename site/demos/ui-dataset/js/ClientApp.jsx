@@ -9,7 +9,6 @@ const App = function () {
   return (
     <div className="paging">
       <DatasetPage title={dataset.title} description={dataset['card-description']} score={dataset.upvotes} />
-      // sidebar // buttons
     </div>
   );
 };
