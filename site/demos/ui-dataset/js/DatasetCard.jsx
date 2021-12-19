@@ -27,12 +27,10 @@ class DatasetCard extends React.Component {
           <h3>{this.props.description}</h3>
           <Vote vote={this.props.score} />
           <div className="bottom">
-            <div className="link-background">
+            <button onClick={ () => {navigator.clipboard.writeText(this.props.link)}} className="link-background">
               <p>{this.props.link}</p>
-              <a>
-                <img src="../assets/clipboard.svg" alt="copy to clipboard" className="link-copy" />
-              </a>
-            </div>
+              <img src="../assets/clipboard.svg" alt="copy to clipboard" className="link-copy" />
+            </button>
             <div className="buy">
               <Button type="full" text="Buy" />
             </div>

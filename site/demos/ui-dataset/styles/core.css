@@ -11,6 +11,24 @@ body {
 	background-color: #F6F6F6;
 }
 
+/*	LOGO	*/
+
+.logo {
+	width: 8%;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.logo:hover {
+	width: 8.1%;
+	transition: 0.2s;
+}
+
+
+
 
 /* MAIN DATASET CARD AND ADDRESS*/
 
@@ -107,6 +125,7 @@ body {
 .upvote,
 .downvote {
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .card-vote p {
@@ -132,7 +151,14 @@ body {
 	display: flex;
 	flex-direction: row;
 	cursor: pointer;
+	outline: none;
+	border: none;
 }
+
+.link-background:active {
+	background-color: #585858;
+}
+
 
 .link-background p {
 	color: white;
@@ -241,6 +267,42 @@ body {
 	font-family: "lato";
 }
 
+.button-none {
+	width: auto;
+	height: 32px;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	margin-right: 10px;
+	margin-top: 10px;
+	transition: 0.2s;
+	background-color: transparent;
+}
+
+.button-none p {
+	width: auto;
+	padding: 0px 20px; 
+	margin: 0px;
+	color: #2f2f2f;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: "lato";
+}
+
+.button-none:hover {
+	cursor: pointer;
+	margin-top: 9px;
+}
+
+.button-none__clicked {
+	background-color: #2f2f2f;
+}
+
+.button-none__clicked p {
+	color: white;
+}
+
+
 
 
 /* 	SIDE BAR 	*/
@@ -250,7 +312,7 @@ body {
 	font-size: 14px;
 	position: absolute;
 	right: 18%;
-	top: 50%;
+	top: 30%;
 }
 
 .side-panel_entry {
@@ -269,3 +331,40 @@ body {
 	flex-direction: column;
 }
 
+
+/*	CONTENT CARD	*/
+
+.content {
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 30%;
+}
+
+.content-buttons {
+	margin-left: 5%;
+	margin-bottom: 2%;
+}
+
+.card {
+	width: 65%;
+	height: auto;
+	padding: 50px;
+	background-color: white;
+	border-radius: 25px;
+	transition: 0.3s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.card:hover {
+	transition: 1s;
+	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
+	    		4.3px 4.4px 5.3px rgba(0, 0, 0, 0.067),
+		  		8px 8.3px 10px rgba(0, 0, 0, 0.073),
+		    	14.3px 14.7px 17.9px rgba(0, 0, 0, 0.075),
+			 	26.7px 27.6px 33.4px rgba(0, 0, 0, 0.073),
+			    64px 66px 80px rgba(0, 0, 0, 0.07);
+}
