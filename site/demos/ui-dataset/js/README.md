@@ -2,25 +2,19 @@
 
 Project Tree:
 ```
-																	 |------- Header
-																	 |											 |---- Vote
-ClientApp -------- DatasetPage ---------- DatasetCard  ----|
-				   												 |										   |---- Button
-																	 |
-																	 |					 						 |---- Entry 
-				   												 |------ SidePanel ------|
-				    											 |											 |---- Button
-				   												 |
-																	 |
-																	 |											 |---- ReadMe 
-																	 |------- Content -------|
-																	 												 |---- Snippet
-																													 |
-																													 |---- Code
-																													 |
-																													 |---- Issues
-																													 |
-																													 |---- Discusstion
-																													 |
-																													 |---- Button
+				   |------- Header
+				   |
+ClientApp -------- DatasetPage ----|----- DatasetCard  ----|---- Vote
+				   |	 		   |---- Button
+				   |
+				   |------ SidePanel ------|---- Entry 
+				   |			   |---- Button
+				   |
+				   |------- Content -------|---- ReadMe
+				   			   |---- Snippet
+							   |---- Code
+							   |---- Issues
+					   		   |---- Discusstion
+							   |---- Button
+
 ```				
