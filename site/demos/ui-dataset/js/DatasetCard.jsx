@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from './General';
 import Vote from './Vote';
 
-
 class DatasetCard extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +26,12 @@ class DatasetCard extends React.Component {
           <h3>{this.props.description}</h3>
           <Vote vote={this.props.score} />
           <div className="bottom">
-            <button onClick={ () => {navigator.clipboard.writeText(this.props.link)}} className="link-background">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(this.props.link);
+              }}
+              className="link-background"
+            >
               <p>{this.props.link}</p>
               <img src="../assets/clipboard.svg" alt="copy to clipboard" className="link-copy" />
             </button>

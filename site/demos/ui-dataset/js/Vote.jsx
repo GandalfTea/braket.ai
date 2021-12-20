@@ -1,7 +1,7 @@
 import React from 'react';
-import data from "../data.json";
+import data from '../data.json';
 
-const dataset = data["common_gen"];
+const dataset = data.common_gen;
 
 class Vote extends React.Component {
   constructor(props) {
@@ -17,42 +17,33 @@ class Vote extends React.Component {
       vote === 'up'
         ? this.setState({ isPressedUpvote: !this.state.isPressedUpvote })
         : this.setState({ isPressedDownvote: !this.state.isPressedDownvote });
-			vote === 'up'
-				? data['common-gen']['score'] += 1
-				: data['common-gen']['score'] -= 1 
-			// check for conflicts
-			if (vote === "up" ? this.state.isPressedDownvote : this.state.isPressedUpvote) {
-				vote === 'up'
-					? this.setState({ isPressedDownvote: !this.state.isPressedDownvote })
-					: this.setState({ isPressedUpvote: !this.state.isPressedUpvote }); 
-				vote === 'up'
-					? data['common-gen']['score'] += 1
-					: data['common-gen']['score'] -= 1 
-			} 
+      vote === 'up' ? (data['common-gen'].score += 1) : (data['common-gen'].score -= 1);
+      // check for conflicts
+      if (vote === 'up' ? this.state.isPressedDownvote : this.state.isPressedUpvote) {
+        vote === 'up'
+          ? this.setState({ isPressedDownvote: !this.state.isPressedDownvote })
+          : this.setState({ isPressedUpvote: !this.state.isPressedUpvote });
+        vote === 'up' ? (data['common-gen'].score += 1) : (data['common-gen'].score -= 1);
+      }
       return;
     }
-    // send request to cancel the vote 
+    // send request to cancel the vote
     vote === 'up'
       ? this.setState({ isPressedUpvote: !this.state.isPressedUpvote })
       : this.setState({ isPressedDownvote: !this.state.isPressedDownvote });
-		vote === 'up'
-			? data['common-gen']['score'] -= 1
-			: data['common-gen']['score'] += 1 
-		if (vote === "up" ? this.state.isPressedDownvote : this.state.isPressedUpvote) {
-			vote === 'up'
-				? this.setState({ isPressedDownvote: !this.state.isPressedDownvote })
-				: this.setState({ isPressedUpvote: !this.state.isPressedUpvote }); 
-			vote === 'up'
-				? data['common-gen']['score'] += 1
-				: data['common-gen']['score'] -= 1 
-		} 
+    vote === 'up' ? (data['common-gen'].score -= 1) : (data['common-gen'].score += 1);
+    if (vote === 'up' ? this.state.isPressedDownvote : this.state.isPressedUpvote) {
+      vote === 'up'
+        ? this.setState({ isPressedDownvote: !this.state.isPressedDownvote })
+        : this.setState({ isPressedUpvote: !this.state.isPressedUpvote });
+      vote === 'up' ? (data['common-gen'].score += 1) : (data['common-gen'].score -= 1);
+    }
   }
 
   renderImg(orientation) {
-    const vote = (orientation === "upvote") ? this.state.isPressedUpvote : this.state.isPressedDownvote; 
-		const vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
-    return <img src={vimg} alt={ orientation } 
-					           className={ orientation } />;
+    const vote = orientation === 'upvote' ? this.state.isPressedUpvote : this.state.isPressedDownvote;
+    const vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
+    return <img src={vimg} alt={orientation} className={orientation} />;
   }
 
   render() {
@@ -64,7 +55,7 @@ class Vote extends React.Component {
         <button type="button" className="score_button" onClick={this.vote.bind(this, 'down')}>
           {this.renderImg('downvote')}
         </button>
-        <p>{data['common-gen']['score']}</p>
+        <p>{data['common-gen'].score}</p>
       </div>
     );
   }

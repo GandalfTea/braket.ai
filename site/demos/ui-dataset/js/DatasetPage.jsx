@@ -14,7 +14,7 @@ class DatasetPage extends React.Component {
   render() {
     return (
       <div className="paging">
-	<img src='../assets/logo.svg' className="logo" />
+        <img src="../assets/logo.svg" className="logo" />
         <DatasetCard
           title={dataset.title}
           description={dataset['card-description']}
@@ -23,7 +23,7 @@ class DatasetPage extends React.Component {
           raddress={dataset.raddress}
         />
         <SidePanel />
-	<Content />
+        <Content />
       </div>
     );
   }
