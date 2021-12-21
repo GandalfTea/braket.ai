@@ -10,16 +10,16 @@ const Card = function (props) {
 };
 
 const ReadMe = function (props) {
-	var codes = dataset.description.split("```");
-	const code_blocks = [] 
-	codes.pop();
-	if(codes.length % 2 === 0) {
-		for(let i = 1; i < codes.length; i+2) {
-			code_blocks.push(codes.splice(i, i+1));	
-		}
-	}
-	const md = dataset.description.split("\n").map( x => <p>{x}</p>)
-  return <Card content={md}/>;
+  const codes = dataset.description.split('```');
+  const code_blocks = [];
+  codes.pop();
+  if (codes.length % 2 === 0) {
+    for (let i = 1; i < codes.length; i + 2) {
+      code_blocks.push(codes.splice(i, i + 1));
+    }
+  }
+  const md = dataset.description.split('\n').map((x) => <p>{x}</p>);
+  return <Card content={md} />;
 };
 
 const Snippet = function () {
@@ -93,12 +93,17 @@ const Code = function () {
       <div className="code-card">
         <div>
           <a href={entry.link}>
-            <i><h3>{entry.name}</h3></i>
+            <i>
+              <h3>{entry.name}</h3>
+            </i>
           </a>
-          <p className="code-author">by {entry.author}</p>
+          <p className="code-author">
+            by
+            {entry.author}
+          </p>
           <p>{entry.description}</p>
         </div>
-        <Vote vote={entry.score} />
+        <Vote score={entry.score} color="black" />
       </div>
     );
     cards.push(<Card content={card} />);

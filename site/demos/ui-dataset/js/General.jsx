@@ -43,13 +43,12 @@ const Button = function (props) {
   );
 };
 
-
-const CodeSegment = (props) => {
-	return(
-		<div className="code-segment">
-			<p>{props.content}</p>
-		</div>
-	)
-}
+const CodeSegment = function (props) {
+  return (
+    <div className="code-segment">
+      <p>{props.content}</p>
+    </div>
+  );
+};
 
 export { Button };

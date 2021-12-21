@@ -16,17 +16,17 @@ class DatasetPage extends React.Component {
   render() {
     return (
       <div className="paging">
-				<Header />
+        <Header />
         <DatasetCard
           title={dataset.title}
           description={dataset['card-description']}
-          score={dataset.upvotes}
+          score={dataset.score}
           link={dataset['cdn-link']}
           raddress={dataset.raddress}
         />
         <SidePanel />
         <Content />
-	<Footer type="simple" />
+        <Footer type="simple" />
       </div>
     );
   }

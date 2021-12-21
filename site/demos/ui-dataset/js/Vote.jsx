@@ -40,9 +40,14 @@ class Vote extends React.Component {
     }
   }
 
-  renderImg(orientation) {
+  renderImg(orientation, color="white") {
     const vote = orientation === 'upvote' ? this.state.isPressedUpvote : this.state.isPressedDownvote;
-    const vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
+    var vimg = ''
+    if(color === "black") {
+	vimg = vote ? '../assets/vote-black_pressed.svg' : '../assets/vote-black.svg';
+    } else {
+    	vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
+    }
     return <img src={vimg} alt={orientation} className={orientation} />;
   }
 
@@ -50,12 +55,12 @@ class Vote extends React.Component {
     return (
       <div className="card-vote">
         <button type="button" className="score_button" onClick={this.vote.bind(this, 'up')}>
-          {this.renderImg('upvote')}
+          {this.renderImg('upvote', this.props.color ? this.props.color : 'white')}
         </button>
         <button type="button" className="score_button" onClick={this.vote.bind(this, 'down')}>
-          {this.renderImg('downvote')}
+          {this.renderImg('downvote', this.props.color ? this.props.color : 'white')}
         </button>
-        <p>{data['common-gen'].score}</p>
+        <p>{this.props.score}</p>
       </div>
     );
   }

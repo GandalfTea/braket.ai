@@ -10,6 +10,7 @@ class DatasetCard extends React.Component {
   // is object because I want to live update the upvotes
 
   render() {
+    console.log(this.props.upvotes)
     const address = [];
     const raddress = this.props.raddress.split(' / ');
     for (const element in raddress) {
@@ -24,7 +25,7 @@ class DatasetCard extends React.Component {
         <div className="dataset-card">
           <h2>{this.props.title}</h2>
           <h3>{this.props.description}</h3>
-          <Vote vote={this.props.score} />
+          <Vote score={this.props.score} />
           <div className="bottom">
             <button
               onClick={() => {

@@ -8,7 +8,7 @@ const dataset = data['common-gen'];
 const App = function () {
   return (
     <div className="paging">
-      <DatasetPage title={dataset.title} description={dataset['card-description']} score={dataset.upvotes} />
+      <DatasetPage title={dataset.title} description={dataset['card-description']} />
     </div>
   );
 };
