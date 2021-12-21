@@ -11,7 +11,9 @@ class Content extends React.Component {
   }
 
   updateState(update) {
-		if(update === "") { console.log("ERROR: updateState() empty argument. ")}
+    if (update === '') {
+      console.log('ERROR: updateState() empty argument. ');
+    }
     this.setState({ pageDisplay: update });
   }
 
@@ -22,9 +24,9 @@ class Content extends React.Component {
         return <ReadMe />;
       case 'Snippet':
         return <Snippet />;
-      case "Code":
-	return <Code />
-		/* 	case "Issues":
+      case 'Code':
+        return <Code />;
+      /* 	case "Issues":
 				return <Issues />
 			case "Discussion":
 				return <Discussion /> */
