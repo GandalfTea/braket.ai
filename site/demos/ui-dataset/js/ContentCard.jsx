@@ -61,7 +61,7 @@ const Snippet = function () {
         for (const elm of entry[column]) {
           elements.push(elm);
         }
-        elements = elements.map((x) => <p>{x}</p>);
+        elements = elements.map((x) => x + ",  ");
         log.push(elements);
         elements = [];
       } else {

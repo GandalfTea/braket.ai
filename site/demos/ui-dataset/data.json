@@ -4,16 +4,20 @@
         "card-description": "CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.",
         "cdn-link": "cdn.braket.ai/4547362",
 				"raddress": "datasets / regression",
-        "score": 247,
-        "value": "sell",
-        "full-price": 30,
-        "currency": "usd",
-        "free-licence": "y",
         "entries": 9128,
 				"files": 1,
         "file-type": "CSV",
         "file-size": "34Kb",
         "licence": "CC0: Public Domain",
+        "score": 247,
+				"price-options": {
+					"full dataset": "300 USD",
+					"partial dataset": {
+						"1": "3 USD",
+						"50": "130 USD"
+					},
+					"free licence": "extended"
+				},
         "tasks": [
             "Regression"
         ],
@@ -37,7 +41,7 @@
             {
                 "concept_set_idx": 0,
                 "concepts": ["ski", "mountain", "skier"],
-                "target": "Three skiers are skiing on a snowy mountain."
+                "target": "A skier is skiing down a mountain."
             },
             {
                 "concept_set_idx": 0,
@@ -45,24 +49,49 @@
                 "target": "Three skiers are skiing on a snowy mountain."
             },
             {
-                "concept_set_idx": 0,
-                "concepts": ["ski", "mountain", "skier"],
-                "target": "Three skiers are skiing on a snowy mountain."
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog is wagging his tail."
             },
             {
-                "concept_set_idx": 0,
-                "concepts": ["ski", "mountain", "skier"],
-                "target": "Three skiers are skiing on a snowy mountain."
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "The dog wags his tail at the boy."
             },
             {
-                "concept_set_idx": 0,
-                "concepts": ["ski", "mountain", "skier"],
-                "target": "Three skiers are skiing on a snowy mountain."
+                "concept_set_idx": 1,
+                "concepts": ["wag", "tail", "dog"],
+                "target": "a dog wags its tails with its heart"
             },
             {
-                "concept_set_idx": 0,
-                "concepts": ["ski", "mountain", "skier"],
-                "target": "Three skiers are skiing on a snowy mountain."
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "woman paddling canoe on a lake"
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "paddle an open canoe along lake ."
+            },
+            {
+                "concept_set_idx": 2,
+                "concepts": ["lake", "paddle", "canoe"],
+                "target": "a man padles his canoe on a lake."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "a train pulls into station"
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "train pulling in to station ."
+            },
+            {
+                "concept_set_idx": 3,
+                "concepts": ["station", "train", "pull"],
+                "target": "the train pulling into station"
             }
         ],
         "code": "cdn.braket.ai/4547362/code",

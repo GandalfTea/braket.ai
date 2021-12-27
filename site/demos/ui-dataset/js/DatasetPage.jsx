@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import DatasetCard from './DatasetCard';
-import SidePanel from './SidePanel';
 import Content from './Content';
+import SidePanel from './SidePanel';
 import Footer from './Footer';
 import data from '../data.json';
 

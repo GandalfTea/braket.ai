@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './General';
+import BuyOptions from './BuyOptions'
 import Vote from './Vote';
 
 class DatasetCard extends React.Component {
@@ -36,6 +37,8 @@ class DatasetCard extends React.Component {
               <p>{this.props.link}</p>
               <img src="../assets/clipboard.svg" alt="copy to clipboard" className="link-copy" />
             </button>
+
+						<BuyOptions />
             <div className="buy">
               <Button type="full" text="Buy" />
             </div>

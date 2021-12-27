@@ -289,6 +289,83 @@ body {
 
 
 
+/*		BUY OPTIONS MENU		*/
+
+.buy-options {
+	position: absolute;
+	left: 20%;
+	height: 40px;
+	width: 200px;
+	margin-left: 30%;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.buy-options h3 {
+	width: auto;
+	font-size: 17px;
+	font-weight: 700px;
+	margin: 0;
+}
+
+.buy-options h1 {
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 27px;
+	color: white;
+	margin-left: 10%;
+	margin-top: -5px;
+}
+
+.buy-display {
+	display: flex;
+	flex-direction: row;
+	height: 20px;
+}
+
+.buy-display button {
+	width: 15px;
+	margin-left: 10px;
+	margin-top: 5px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.buy-options__menu {
+	position: absolute;
+	margin-left: -30px;
+	margin-top: -20px;
+	height: 140px;
+	width: 150px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+}
+
+.buy-options__menu button {
+	outline: none;
+	border: none;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 17px;
+	margin-top: 13%;
+	background-color: white;
+}
+
+.buy-options__menu button:hover {
+	font-weight: 700;
+}
+
+
 /* 	SIDE BAR 	*/
 
 .side-panel {
