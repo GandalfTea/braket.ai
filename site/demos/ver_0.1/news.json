@@ -1,0 +1,41 @@
+{
+	"news": [
+		{
+			"type": "contribution-update",
+			"result": "accepted",
+			"ticket": "common_gen #5421"
+		},
+		{
+			"type": "message",
+			"title": "Hey bro, saw your open dataset",
+			"author": "Daniel Dee's Nuts",
+			"message": "I would like to participate in the moderation of entries, as I happen to have a lot of experience with all the races of demons from all levels in hell. I even met one in person at one point (though I was high on meth, I believe they only show themselves to the ones they deem worthy, like the ones that are rebels).\n I would also like to suggest banning all contributions made by women, as they cannot be trusted with data this important." 
+		},
+		{
+			"type": "comment",
+			"comment-type": "self",
+			"original": "Garbage collection recomandation",
+			"replies": [
+				{
+					"author": "Daniel Dee's Nuts",
+					"message": "I would like to participate in the moderation of entries, as I happen to have a lot of experience with all the races of demons from all levels in hell. I even met one in person at one point (though I was high on meth, I believe they only show themselves to the ones they deem worthy, like the ones that are rebels). I would also like to suggest banning all contributions made by women, as they cannot be trusted with data this important.\nHope to hear from you soon, Daniel.",
+					"replies": [
+						{
+							"author": "Dee's Nuts Hater",
+							"message": "When I would heal Israel, the iniquity of Ephraim is revealed, and the evil deeds of Samaria; for they deal falsely; the thief breaks in, and the bandits raid outside. But they do not consider that I remember all their evil. Now their deeds surround them; they are before my face. By their evil they make the king glad, and the princes by their treachery. They are all adulterers; they are like a heated oven whose baker ceases to stir the fire, from the kneading of the dough until it is leavened. On the day of our king, the princes became sick with the heat of wine; he stretched out his hand with mockers.\n\nHosea 7:1-16",
+							"replies": "none"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "request",
+			"workforce": "common_gen",
+			"message": "Hey guys! As you might know, the vote to add another field was mostly positive, so we will now start working towards adding the pgp_format_idx. There are currently ~2 million entries that need modification, so each one in the workforce should do ~100 each. If you are unable, please decline so that your entries go to someone else. This change should take around 2 weeks. While this is going on, the modified dataset will be on the working branch. The unmodified one will be on the main branch. Once this is done, we will merge the working branch with the main, so if you wish to not have the new field, please filter it in your code.\n\nThanks to all the workforce volunteers!\nBiich Las'agna",
+			"num": 100, 
+			"task": "insert the pgp_format_idx field into all the entries",
+			"deadline": "23 February"
+		}
+	]
+}

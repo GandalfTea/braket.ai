@@ -1,13 +1,19 @@
 
 const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
+
+const pages = ["dataset", "search", "landing"];
 
 module.exports = {
   context: __dirname,
-  entry: './js/ClientApp.jsx',
+  entry: pages.reduce((config, page) => {
+		config[page] = `./js/${page}.jsx`;
+		return config;
+  }, {}),
   devtool: 'source-map',
   output: {
+    filename: '[name].js',
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
@@ -28,4 +34,15 @@ module.exports = {
       }
     ]
   },
+  plugins: [].concat(
+		pages.map(
+			(page) =>
+					new htmlWebpackPlugin({
+						inject: true,
+						template: `./${page}.html`,
+						filename: `${page}.html`,
+						chunks: [page],
+					})
+		)
+	),
 };

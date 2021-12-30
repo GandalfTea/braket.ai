@@ -40,13 +40,13 @@ class Vote extends React.Component {
     }
   }
 
-  renderImg(orientation, color="white") {
+  renderImg(orientation, color = 'white') {
     const vote = orientation === 'upvote' ? this.state.isPressedUpvote : this.state.isPressedDownvote;
-    var vimg = ''
-    if(color === "black") {
-	vimg = vote ? '../assets/vote-black_pressed.svg' : '../assets/vote-black.svg';
+    let vimg = '';
+    if (color === 'black') {
+      vimg = vote ? '../assets/vote-black_pressed.svg' : '../assets/vote-black.svg';
     } else {
-    	vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
+      vimg = vote ? '../assets/vote_pressed.svg' : '../assets/vote.svg';
     }
     return <img src={vimg} alt={orientation} className={orientation} />;
   }

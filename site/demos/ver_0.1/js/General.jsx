@@ -51,4 +51,59 @@ const CodeSegment = function (props) {
   );
 };
 
-export { Button };
+
+const Table = (props) => {
+  let table = [];
+  const table_entries = [];
+  const columns = [];
+  let elements = [];
+
+  for (const i in props.data) {
+    table_entries.push(props.data[i]);
+  }
+  for (const column in table_entries[0]) {
+    columns.push(column);
+  }
+
+  table.push(
+    <tr>
+      {columns.map((x) => (
+        <th>{x}</th>
+      ))}
+    </tr>
+  );
+  table.push(
+    <tr>
+      {columns.map((x) => (
+        <td>
+          <i>{typeof x}</i>
+        </td>
+      ))}
+    </tr>
+  );
+
+  for (const entry of table_entries) {
+    let log = [];
+    for (const column of columns) {
+      if (Array.isArray(entry[column])) {
+        for (const elm of entry[column]) {
+          elements.push(elm);
+        }
+        elements = elements.map((x) => `${x},  `);
+        log.push(elements);
+        elements = [];
+      } else {
+        log.push(entry[column]);
+      }
+    }
+    log = log.map((x) => <td> {x} </td>);
+    table.push(<tr>{log}</tr>);
+  }
+  return (table = (
+    <table className="data-table" align="center">
+      {table}
+    </table>
+  ))
+}
+
+export { Button, Table };
