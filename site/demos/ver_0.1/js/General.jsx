@@ -51,8 +51,7 @@ const CodeSegment = function (props) {
   );
 };
 
-
-const Table = (props) => {
+const Table = function (props) {
   let table = [];
   const table_entries = [];
   const columns = [];
@@ -103,7 +102,7 @@ const Table = (props) => {
     <table className="data-table" align="center">
       {table}
     </table>
-  ))
-}
+  ));
+};
 
 export { Button, Table };

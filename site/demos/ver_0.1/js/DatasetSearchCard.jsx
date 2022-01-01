@@ -12,25 +12,26 @@ class DatasetSearchCard extends React.Component {
   }
 
   changeContent(cont) {
-		console.log(cont);
+    console.log(cont);
     this.setState({ content: cont });
   }
 
   renderContent() {
     if (this.state.content === 'data') {
-      return <Table data={this.props.data} /> 
-    } else if (this.state.content === 'snippet') {
-      return <pre>{JSON.stringify(this.props.snippet, undefined, 2)}</pre>
-    } else if (this.state.content === 'licence') {
-      return <p>{this.props.licence}</p>;
-    } else {
-      console.log('Error: changeContent() argument is invalid. DatasetSearchCard.jsx.');
-      return <p>{this.state.data}</p>;
+      return <Table data={this.props.data} />;
     }
+    if (this.state.content === 'snippet') {
+      return <pre>{JSON.stringify(this.props.snippet, undefined, 2)}</pre>;
+    }
+    if (this.state.content === 'licence') {
+      return <p>{this.props.licence}</p>;
+    }
+    console.log('Error: changeContent() argument is invalid. DatasetSearchCard.jsx.');
+    return <p>{this.state.data}</p>;
   }
 
   render() {
-    var tags = [];
+    let tags = [];
     for (const tag in this.props.tags) {
       tags.push(this.props.tags[tag]);
     }
@@ -40,7 +41,7 @@ class DatasetSearchCard extends React.Component {
       <div className="dataset-search-card">
         <div className="dataset-search-card__main">
           <div className="dataset-search-card__details">
-            <Vote score={this.props.score}/>
+            <Vote score={this.props.score} />
             <button className="details__options">
               <img src="../assets/three-dots.svg" />
             </button>
@@ -53,27 +54,29 @@ class DatasetSearchCard extends React.Component {
           </div>
           <div className="dataset-search-card__content">
             <div className="dataset-search-card__menu">
-              <button onClick={() => this.changeContent("data")} 
-										  className={ (this.state.content === "data") ? "dataset-search-card__button__pressed" : "" }>
+              <button
+                onClick={() => this.changeContent('data')}
+                className={this.state.content === 'data' ? 'dataset-search-card__button__pressed' : ''}
+              >
                 <p>Data</p>
               </button>
-              <button onClick={() => this.changeContent("snippet")}
-										  className={ (this.state.content === "snippet") ? "dataset-search-card__button__pressed" : "" }>
+              <button
+                onClick={() => this.changeContent('snippet')}
+                className={this.state.content === 'snippet' ? 'dataset-search-card__button__pressed' : ''}
+              >
                 <p>Data Snippet</p>
               </button>
-              <button onClick={() => this.changeContent("licence")}
-										  className={ (this.state.content === "licence") ? "dataset-search-card__button__pressed" : "" }>
+              <button
+                onClick={() => this.changeContent('licence')}
+                className={this.state.content === 'licence' ? 'dataset-search-card__button__pressed' : ''}
+              >
                 <p>Licence</p>
               </button>
             </div>
-						<div className="dataset-search-card__data">
-            	{this.renderContent()}
-						</div>
+            <div className="dataset-search-card__data">{this.renderContent()}</div>
           </div>
         </div>
-				<div className="dataset-search-card__tags">	
-        	{tags}
-				</div>
+        <div className="dataset-search-card__tags">{tags}</div>
       </div>
     );
   }

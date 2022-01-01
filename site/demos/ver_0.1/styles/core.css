@@ -511,7 +511,7 @@ body {
 	transition: 0.2s;
 }
 
-.search {
+.search-dataset {
 	position: absolute;
 	left: 40%;
 	border: none;
@@ -532,6 +532,28 @@ body {
 	transition: 0.2s;
 }
 
+.search {
+	position: absolute;
+	left: 29.5vw;
+	border: none;
+	outline: none;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+	height: 35px;
+	width: 41%;
+	padding: 10px 30px;
+	font-family: "lato";
+	font-weight: 400;
+	font-size: 15px;
+	transition: 0.2s;
+}
+
+.search-dataset:hover,
 .search:hover {
 	transition: 0.2s;
 	box-shadow: 1.8px 1.8px 2.2px rgba(0, 0, 0, 0.052),
@@ -542,10 +564,17 @@ body {
 			  		  64px 66px 80px rgba(0, 0, 0, 0.07);
 }
 
-.search-icon {
+.search-icon-dataset {
 	height: 15px;
 	position: absolute;
 	left: 78%;
+	margin-top: 10px;
+}
+
+.search-icon {
+	height: 15px;
+	position: absolute;
+	left: 75%;
 	margin-top: 10px;
 }
 
@@ -565,14 +594,30 @@ body {
 	text-decoration: none;
 	color: #2f2f2f;
 	position: absolute;
-	left: 85%;
+	left: 90%;
 	top: 10px;
 }
 
 .log-in {
+	left: 95%;
+	font-weight: 700;
+}
+
+.sign-up-dataset,
+.log-in-dataset {
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 15px;
+	text-decoration: none;
+	color: #2f2f2f;
+	position: absolute;
+	left: 85%;
+	top: 10px;
+}
+
+.log-in-dataset {
 	left: 90%;
 	font-weight: 700;
-
 }
 
 
@@ -580,6 +625,18 @@ body {
 /*		FOOTER		*/
 
 .footer-simple {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 37vw;
+	margin-top: 3%;
+	margin-bottom: 2%;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.footer-simple-dataset {
 	width: 60%;
 	display: flex;
 	flex-direction: row;
@@ -591,20 +648,24 @@ body {
 	font-size: 13px;
 }
 
+.footer-simple-dataset img,
 .footer-simple img {
 	width: 15px;
 }
 
+.footer-simple-dataset p,
 .footer-simple p {
 	margin-left: 10px;
 }
 
+.footer-simple-dataset a,
 .footer-simple a {
 	text-decoration: none;
 	color: black;
 	margin-left: 20%;
 }
 
+.footer-simple-dataset a,
 .footer-simple a:hover {
 	text-shadow:0px 0px 0.5px black;
 }

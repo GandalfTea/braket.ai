@@ -13,49 +13,49 @@ class Header extends React.Component {
     }
     return (
       <div>
-        <a href="search.html" className="sign-up">
+        <a href="search.html" className={ (this.props.type === "basic") ? "sign-up" : "sign-up-dataset"} >
           Sign Up
         </a>
-        <a href="" className="log-in">
+	<a href="" className={ (this.props.type === "basic") ? "log-in" : "log-in-dataset"} >
           Log In
         </a>
       </div>
     );
   }
 
-	search(key, query) {
-		//
-	}
+  search(key, query) {
+    //
+  }
 
   render() {
-		if (this.props.type === "dataset-page") {
-    	return (
-     	 <div className="header-dataset">
-     	   <img src="../assets/logo.svg" className="logo" />
-     	   <input type="search" className="search" />
-     	   <img src="../assets/search.svg" alt="search-icon" className="search-icon" />
-     	   {this.printLoginStatus()}
-     	 </div>
-    	);
-		} else if (this.props.type === "basic") {
-    	return (
-     	 <div className="header">
-     	   <img src="../assets/logo.svg" className="logo" />
-     	   <input type="search" className="search" />
-     	   <img src="../assets/search.svg" alt="search-icon" className="search-icon" />
-     	   {this.printLoginStatus()}
-     	 </div>
-			)
-		} else {
-			return(
-     	 <div className="header">
-     	   <img src="../assets/logo.svg" className="logo" />
-     	   <input type="search" className="search" />
-     	   <img src="../assets/search.svg" alt="search-icon" className="search-icon" />
-     	   {this.printLoginStatus()}
-     	 </div>
-			)
-		}
+    if (this.props.type === 'dataset') {
+      return (
+        <div className="header">
+          <img src="../assets/logo.svg" className="logo" />
+          <input type="search" className="search-dataset" />
+          <img src="../assets/search.svg" alt="search-icon" className="search-icon-dataset" />
+          {this.printLoginStatus()}
+        </div>
+      );
+    }
+    if (this.props.type === 'basic') {
+      return (
+        <div className="header">
+          <img src="../assets/logo.svg" className="logo" />
+          <input type="search" className="search" />
+          <img src="../assets/search.svg" alt="search-icon" className="search-icon" />
+          {this.printLoginStatus()}
+        </div>
+      );
+    }
+    return (
+      <div className="header">
+        <img src="../assets/logo.svg" className="logo" />
+        <input type="search" className="search" />
+        <img src="../assets/search.svg" alt="search-icon" className="search-icon" />
+        {this.printLoginStatus()}
+      </div>
+    );
   }
 }
 

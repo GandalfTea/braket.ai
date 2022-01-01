@@ -25,8 +25,8 @@ const ReadMe = function (props) {
 
 const Snippet = function () {
   const format = <pre>{JSON.stringify(dataset.preview['0'], undefined, 2)}</pre>;
-	
-	const table = <Table data={dataset.preview} />
+
+  const table = <Table data={dataset.preview} />;
 
   return (
     <div>

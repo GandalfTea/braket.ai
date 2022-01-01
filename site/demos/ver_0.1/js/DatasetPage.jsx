@@ -16,7 +16,7 @@ class DatasetPage extends React.Component {
   render() {
     return (
       <div className="paging">
-        <Header />
+        <Header type="dataset" />
         <DatasetCard
           title={dataset.title}
           description={dataset['card-description']}
@@ -26,7 +26,7 @@ class DatasetPage extends React.Component {
         />
         <SidePanel />
         <Content />
-        <Footer type="simple" />
+        <Footer type="dataset" />
       </div>
     );
   }
