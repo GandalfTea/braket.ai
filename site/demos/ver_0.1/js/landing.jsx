@@ -107,7 +107,7 @@ class Comment extends React.Component {
 		if (this.state.reply) {
 			return (
 				<div className="comment-reply">
-					<textarea placeholder={"Reply to " + this.props.author}></textarea>
+					<textarea autoFocus placeholder={"Reply to " + this.props.author} onBlur={ () => this.setState({ reply: !this.state.reply})}></textarea>
 				</div>
 			)
 		}
