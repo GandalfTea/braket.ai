@@ -86,6 +86,49 @@ body {
 	width: 80%;
 }
 
+@media only screen and (max-width: 1000px) {
+
+	.relative-address {
+		display: none;
+	}
+
+	.card-address {
+		width: 100%;
+		height: 40vh;
+		margin: 0;
+	}
+
+	.dataset-card {
+		border-radius: 0px;
+		height: auto;
+		padding: 1vh;
+	}
+	
+	.dataset-card:hover {
+		box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+					0 2px 2px rgba(0,0,0,0.11), 
+					0 4px 4px rgba(0,0,0,0.11), 
+					0 6px 8px rgba(0,0,0,0.11),
+					0 8px 16px rgba(0,0,0,0.11);
+	}
+
+	.dataset-card h2 {
+		font-size: 2vh;
+		padding-top: 10vh;
+	}
+
+	.dataset-card h3 {
+		font-size: 1.5vh;
+		text-align: justify;
+		margin-top: 2vh;
+	}
+
+	.dataset-card .button-border {
+		display: none;
+	}
+
+}
+
 
 .card-vote {
 	display: flex;
@@ -118,9 +161,33 @@ body {
 	font-size: 15px;
 }
 
+@media only screen and (max-width: 1000px) {
+
+	.card-vote {
+		top: 3vh;
+		right: 5vh;
+	}
+	
+	.upvote,
+	.downvote {
+		width: 2vh;
+		margin-right: 1vh;
+	}
+
+	.card-vote p {
+		font-size: 1.5vh;
+	}
+}
+
 .bottom {
 	display: flex;
 	flex-direction: row;
+}
+
+@media only screen and (max-width: 1000px) {
+	.bottom {
+		flex-direction: column;
+	}
 }
 
 .link-background {
@@ -161,11 +228,44 @@ body {
 	height: 18px;
 }
 
+@media only screen and (max-width: 1000px) {
+	.link-background {
+		width: 42vw;
+		height: 2.5vh;
+	}
+
+	.link-background p {
+		margin-top: 0.5vh;
+		font-size: 1.1vh;
+	}
+	
+	.link-background img {
+		height: 1.5vh;
+		margin-top: 0.5vh;
+	}
+}
+
 
 .buy {
 	position: absolute;
 	right: 150px;
 	bottom: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.buy .button {
+		position: relative;
+		height: 3.5vh;
+		width: 8vh;
+		border-radius: 50vh;
+		margin: 0px;
+		top: -4vh;
+		right: -3vh;
+	}
+
+	.buy .button p {
+		font-size: 1.7vh;
+	}
 }
 
 
@@ -364,6 +464,41 @@ body {
 	font-weight: 700;
 }
 
+@media only screen and (max-width: 1000px) {
+	.buy-options {
+		position: relative;
+		left: 3vh;
+		margin: 0;
+		margin-top: 3vh;
+		height: 3vh;
+		width: 60vw;
+		margin-bottom: 5vh;
+	}
+	
+	.buy-options h3 {
+		font-size: 1.7vh;
+	}
+	
+	.buy-options h1 {
+		font-size: 3vh;
+	}
+	
+	.buy-options button {
+		width: 3vh;
+		height: 3vh;
+		background-color: #484848;
+		border-radius: 50px;
+		margin-left: 5vw;
+		margin-top: -0.2vh;
+	}
+
+	.buy-options button img {
+		width: 1vh;
+		height: 1vh;
+	}
+}
+
+
 
 /* 	SIDE BAR 	*/
 
@@ -389,6 +524,13 @@ body {
 .side-panel_entry div {
 	display: flex;
 	flex-direction: column;
+}
+
+@media only screen and (max-width: 1100px) {
+	.side-panel {
+		display: none;
+	}
+	
 }
 
 
@@ -447,6 +589,62 @@ body {
 }
 
 
+/*	MOBILE CONTENT CARD	*/
+.mobile-content-card {
+	width: 90%;
+	background-color: white;
+	border-radius: 50px;
+	height: auto;
+	margin: auto;
+	margin-top: 2vh;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+				0 2px 2px rgba(0,0,0,0.11), 
+				0 4px 4px rgba(0,0,0,0.11), 
+				0 6px 8px rgba(0,0,0,0.11),
+				0 8px 16px rgba(0,0,0,0.11);
+}
+
+.readme_markdown {
+	height: 50vh;
+	overflow-y: scroll;
+	padding: 2vh;
+}
+
+.mobile-content-card h3 {
+	padding: 2vh 0px 2vh 2vh;
+	font-size: 2vh;
+}
+
+.mobile-content-card__top {
+	display: flex;
+	flex-direction: row;
+}
+
+.mobile-content-card button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+
+.mobile-content-card button img {
+	width: 1.5vh;
+	position: absolute;
+	right: 7vh;
+}
+
+
+.mobile-content-card .data-table {
+	font-size: 1.5vh;
+}
+
+.mobile-table {
+	font-size: 1.5vh;
+	height: 50vh;
+	overflow-y: scroll;
+	`
+}
+
+
 /*	CODE CARDS	*/
 
 .code-card {
@@ -482,6 +680,22 @@ body {
 	position: absolute;
 	top: -30px;
 	right: -20px;
+}
+
+.code-mobile {
+	width: 90%;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+.code-mobile h3 {
+	margin-bottom: 2vh;
+	margin-left: 3vh;
+	font-size: 1.5vh;
+}
+
+.code-mobile .card {
+	width: 100%;
 }
 
 

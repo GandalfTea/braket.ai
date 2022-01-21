@@ -2,6 +2,31 @@ import React from 'react';
 import { Card, ReadMe, Snippet, Code } from './ContentCard';
 import { Button } from './General';
 
+class MobileContentCard extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { collapsed: false };
+	}
+
+	render() {
+		return (
+			<div className="mobile-content-card">
+				<div className="mobile-content-card__top">
+					<h3>{this.props.title}</h3>
+					<button 
+							className= { (this.state.collapsed) ? "mobile-collapse" : "mobile-collapse-opened"} 
+							onClick={ () => this.setState({ collapsed: !this.state.collapsed })}>
+		
+							<img src='../assets/arrow.svg' alt="collapse card" />
+					</button>
+				</div>
+				{(!this.state.collapsed) ? this.props.content : null}
+			</div>
+		);
+	}
+}
+
+
 class Content extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +43,21 @@ class Content extends React.Component {
   }
 
   displayPage(page) {
+		if (this.props.mobile) {
+			return(
+				<div>
+					<MobileContentCard title="Description" content={ <ReadMe mobile={true} /> } />
+					<MobileContentCard title="Data Snippet" content={ <div className="mobile-table"><Snippet mobile={true} /></div> } />
+					<div className="code-mobile">
+						<h3>Code</h3>
+						<Code mobile={true} />
+
+					</div>
+				</div>
+			)
+		}
+
+
     // maybe do information sanity check before display?
     switch (page) {
       case 'ReadMe':
@@ -37,6 +77,11 @@ class Content extends React.Component {
   }
 
   render() {
+		if (this.props.mobile) {
+			return (
+					this.displayPage(this.state.pageDisplay)
+			)
+		}
     return (
       <div className="content">
         <div className="content-buttons">

@@ -11,9 +11,26 @@ const dataset = data['common-gen'];
 class DatasetPage extends React.Component {
   constructor(props) {
     super(props);
+		this.state = { width: window.innerWidth };
+		this.updateWidth = this.updateWidth.bind(this);
   }
+		
+	componentWillMount() {
+		window.addEventListener('resize', this.updateWidth);
+	}
+	
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWidth);
+	}
+
+	updateWidth() {
+		this.setState({ width: window.innerWidth });
+	}
 
   render() {
+
+		const isMobile = this.state.width <= 1000;
+		
     return (
       <div className="paging">
         <Header type="dataset" />
@@ -25,7 +42,7 @@ class DatasetPage extends React.Component {
           raddress={dataset.raddress}
         />
         <SidePanel />
-        <Content />
+        <Content mobile={ (isMobile) ? true : false } />
         <Footer type="dataset" />
       </div>
     );

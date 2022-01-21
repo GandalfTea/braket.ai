@@ -20,14 +20,16 @@ const ReadMe = function (props) {
     }
   }
   const md = dataset.description.split('\n').map((x) => <p>{x}</p>);
+	if (props.mobile) return <div className="readme_markdown">{md}</div>
   return <Card content={md} />;
 };
 
-const Snippet = function () {
+const Snippet = function (props) {
   const format = <pre>{JSON.stringify(dataset.preview['0'], undefined, 2)}</pre>;
 
   const table = <Table data={dataset.preview} />;
 
+	if (props.mobile) return(format, table)
   return (
     <div>
       <Card content={format} />
@@ -36,7 +38,7 @@ const Snippet = function () {
   );
 };
 
-const Code = function () {
+const Code = function (props) {
   // send request to server to get code examples .json
   const cards = [];
   for (const entry of code.code) {
@@ -60,6 +62,7 @@ const Code = function () {
     cards.push(<Card content={card} />);
   }
 
+	if (props.mobile) return( cards.splice(0, 4) )
   return <div>{cards}</div>;
 };
 

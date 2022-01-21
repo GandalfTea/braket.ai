@@ -6,6 +6,7 @@
     "babel-loader": "7",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "global": "^4.4.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
@@ -27,7 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "webpack": "^5.64.4",
+    "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1"
   }
 }
